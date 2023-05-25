@@ -11,12 +11,18 @@ $(document).ready(function() {
         question.equation = String(num1) + " + " + String(num2);
         return question;
     }
+    var makeNewQuestion = function () {
     myQuestion = questionMaker();
     $('#equation').text(myQuestion.equation);
+    }
     var rightAnswer = function (playerInput, answer) {
-        console.log(playerInput === answer);
+        if(playerInput === answer) {
+            makeNewQuestion();
+            $('#player-input').val('');
+        }
     }
     $('#player-input').on('keyup', function () {
         rightAnswer(Number($(this).val()), myQuestion.answer);
     });
+    makeNewQuestion();
 });

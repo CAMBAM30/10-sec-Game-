@@ -13,7 +13,14 @@ $(document).ready(function() {
         Score += amount;
         $('#Score').text(Score);
     };
-    var highScore = function ()
+    var newHighScore = function () {
+        if (Score > highScore){
+            highScore = Score;
+            localStorage.setItem("highScore",highScore);
+        }
+        $('#highScore').text(highScore);
+    };
+    
     var beginGame = function () {
         if (!interval) {
             if (timeRemaining === 0){
@@ -51,6 +58,7 @@ $(document).ready(function() {
             $('#player-input').val('');
             fixTimeRemaining(+1);
             fixScore(+1);
+            newHighScore(Score);
         }
     };
     $('#player-input').on('keyup', function () {

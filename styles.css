@@ -18,7 +18,6 @@ h2{
     font-weight: 800;
 }
 h3{
-    border-style: solid;
     text-align: center;
     font-size: 100px;
     font-family: fantasy;
@@ -30,6 +29,12 @@ h4 {
     font-size: 26px;
     color: darkorange;
 }
+h5 {
+    margin-top: 45px;
+    text-align: center;
+    font-weight: 700;
+    color: red;
+}
 input#player-input {
     margin: auto;
     display: block;
@@ -39,6 +44,7 @@ input#player-input {
     color: red;
 }
 p {
+    margin-top: 5px;
     text-align: center;
     font-size: 15px;
     font-weight: 100;

@@ -3,6 +3,7 @@ $(document).ready(function() {
     var interval;
     var timeRemaining = 10;
     var Score = 0;
+    var highScore = 0;
 
     var fixTimeRemaining = function (amount) {
         timeRemaining += amount;
@@ -12,6 +13,7 @@ $(document).ready(function() {
         Score += amount;
         $('#Score').text(Score);
     };
+    var highScore = function ()
     var beginGame = function () {
         if (!interval) {
             if (timeRemaining === 0){
